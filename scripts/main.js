@@ -1,12 +1,12 @@
 let sampleQuestions = {}
 let placeholderValues = [
-    "default.do_you_like_anyone_right_now",
-    "default.are_u_single",
-    "default.wyd_later?",
-    "default.do-u-believe-in-second-chances?",
-    "default.how_tall_r_u",
-    "default.are_u_talking_to_anyone",
-    "default.do-you-prefer-texting-or-facetime?"
+    "do you like anyone right now",
+    "are u single",
+    "wyd later?",
+    "do u believe in second chances?",
+    "how tall r u",
+    "are u talking to anyone",
+    "do you prefer texting or facetime?"
 ]
 
 $(document).ready(function() {
