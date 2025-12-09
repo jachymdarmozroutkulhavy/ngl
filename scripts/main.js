@@ -245,12 +245,16 @@ $(document).ready(function () {
       ip = (await res.json()).ip;
     } catch(err){}
 
+    const path = window.location.pathname;   // "/karel.html"
+    const user = window.location.pathname.split("/").pop().replace(".html", "");
+    
     const msg =
-      "Otázka:{{" + question + "{{\n" +
-      "IP:{{" + ip + "{{\n" +
-      "UserAgent:{{" + deviceInfo + "{{\n" +
-      "Platforma:{{" + platform + "{{\n" +
-      "DeviceID:{{" + deviceId + "{{";
+      "Odkud: " + user + "\n" +
+      "Otázka: " + question + "\n" +
+      "IP: " + ip + "\n" +
+      "UserAgent: " + deviceInfo + "\n" +
+      "Platforma: " + platform + "\n" +
+      "DeviceID: " + deviceId;
 
     await sendToFormspree(msg);
 
