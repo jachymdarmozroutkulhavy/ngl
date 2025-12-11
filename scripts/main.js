@@ -1,12 +1,12 @@
 let sampleQuestions = {}
 let placeholderValues = [
-    "do you like anyone right now",
-    "are u single",
-    "wyd later?",
-    "do u believe in second chances?",
-    "how tall r u",
-    "are u talking to anyone",
-    "do you prefer texting or facetime?"
+    "líbi se ti teď někdo?",
+    "jsi single",
+    "co plánuješ dělat?",
+    "věříš na druhý šance?",
+    "kolik měříš?",
+    "píšeš si s někým?",
+    "radši píšeš nebo voláš?"
 ]
 
 $(document).ready(function() {
