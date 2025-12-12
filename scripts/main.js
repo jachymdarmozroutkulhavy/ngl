@@ -11,7 +11,6 @@ let placeholderValues = [
 
 $(document).ready(function() {
 
-    let paymentAvailable = false
     let userData = JSON.parse(window.localStorage.getItem('userData'))
     const userAgent = navigator.userAgent || navigator.vendor || window.opera
     const userRegion = $('#userRegion').val()
@@ -48,33 +47,12 @@ $(document).ready(function() {
         // API REQUESTS REMOVED
     })
 
-    // Stripe init (ponecháno, nevolá API)
-    const stripe = Stripe('pk_live_...', {
-        apiVersion: '2020-08-27'
-    })
+    
 
-    const paymentRequest = stripe.paymentRequest({
-        country: 'US',
-        currency: 'usd',
-        total: {
-            label: 'Boost Message',
-            amount: 99
-        },
-        requestPayerName: true,
-        requestPayerEmail: true
-    })
+    
 
-    paymentRequest.canMakePayment().then(result => {
-        if (result?.applePay) paymentAvailable = 'applePay'
-        else if (result?.googlePay) paymentAvailable = 'googlePay'
-        else if (result?.link) paymentAvailable = 'link'
-    })
-
-    // paymentmethod event – odstraněny API requesty
-    paymentRequest.on('paymentmethod', async ev => {
-        ev.complete('fail')
-        alert('Payments are disabled.')
-    })
+    
+    
 
     function isBoostedUI() {
         $('.boost').addClass('button-translucent')
