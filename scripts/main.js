@@ -18,8 +18,6 @@ $(document).ready(function() {
 
     const appsflyerId = window?.appsflyerId || userData?.appsflyerId || null
 
-    mixpanel.init('e8e1a30fe6d7dacfa1353b45d6093a00')
-
     // --- placeholder bez fetchování z API ---
     const placeholder = $('.textarea-placeholder')
     let placeholderIndex = 0
