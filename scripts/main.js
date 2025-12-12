@@ -42,18 +42,7 @@ $(document).ready(function() {
     const downloadButtonText = $('.download-link').text()
     const downloadButtonText2 = $('.download-link2').text()
 
-    if (uid) {
-        mixpanel.track_links('.download-link1', 'web_received_download', {
-            distinct_id: uid,
-            page: 'user',
-            copy: downloadButtonText
-        })
-        mixpanel.track_links('.download-link2', 'web_received_download', {
-            distinct_id: uid,
-            page: 'sent',
-            copy: downloadButtonText2
-        })
-    }
+    
 
     $('.download-link').click(() => {
         // API REQUESTS REMOVED
